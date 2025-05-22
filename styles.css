@@ -1,0 +1,144 @@
+@keyframes sparkle {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+    50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 25px #ff00ff; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+}
+
+/* Apply sparkling effect to all headings, paragraphs, and links */
+h1, p, a {
+    animation: sparkle 1.5s infinite alternate;
+}
+
+body {
+    font-family: 'Playpen Sans Deva', cursive;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    background-color: black;
+    overflow: auto;
+}
+
+/* Background Video */
+#bgVideo {
+    position: fixed; /* Fixed to cover full screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* First Message */
+#visitMessage {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#visitMessage:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Button for Profile Access */
+#openProfileBtn {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    display: none; /* Hidden initially */
+}
+
+#openProfileBtn:hover {
+    background-color: #004499;
+}
+
+/* Business Card */
+#businessCard {
+    display: none; /* Initially Hidden */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 25px;
+    width: 360px;
+    text-align: center;
+    border-radius: 12px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Profile Image */
+.profile-photo {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography & Links */
+h1 {
+    color: #222;
+    font-size: 26px;
+}
+
+p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    #businessCard {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .profile-photo {
+        width: 90px;
+    }
+}

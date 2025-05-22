@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam's Profile Access</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="deom.mp4" type="video/mp4">
+    </video>
+
+    <!-- First Message -->
+    <p id="visitMessage">To Visit My Profile Press it! 👈</p>
+
+    <!-- Clickable Button -->
+    <button id="openProfileBtn" style="display: none;">Click Here</button>
+
+    <!-- Business Card Section (Initially Hidden) -->
+    <div id="businessCard" style="display: none;">
+        <img src="shyampic.jpg" alt="Profile photo of Shyam Kumar" class="profile-photo">
+        <h1>Shyam Kumar</h1>
+        <p>Junior AI/ML Developer</p>
+        <p>Email: <a href="mailto:shyam.sumankumar@gmail.com">shyam.sumankumar@gmail.com</a></p>
+        <div id="socialLinks">
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shyam-kumar-b77442297" target="_blank">Shyam Kumar</a></p>
+        </div>
+        <div id="Education">
+            <h2>Education Status</h2>
+            <p>10th Marks: 84.9%</p>
+            <p>Diploma CGPA: 8.91</p>
+            <p>Currently Pursuing: Diploma in AI/ML</p>
+        </div>
+        <div id="bio">
+            <h3>About Me</h3>
+            <p>I am a recent student from DSEU with a diploma in Artificial Intelligence and Machine Learning. I'm also a beginner in web development, passionate about building responsive and user-friendly websites and applications.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
